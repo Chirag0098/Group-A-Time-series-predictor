@@ -87,30 +87,36 @@ st.markdown(
     unsafe_allow_html=True
 )
 
+# Introduction to Time Series Data
 st.markdown("This app performs advanced time series forecasting using ARIMA/SARIMA models.")
-
+st.header("📌 Real-Life Applications of Time Series Forecasting")
+st.write("""
+1. **Stock Market Analysis**: Investors use time series forecasting to predict stock price movements, helping them make informed decisions on buying or selling stocks.
+2. **Weather Forecasting**: Meteorologists analyze past temperature, humidity, and pressure trends to make short- and long-term weather predictions.
+3. **Sales & Demand Forecasting**: Businesses use historical sales data to forecast demand, helping with inventory management and supply chain optimization.
+4. **Healthcare & Disease Prediction**: Hospitals and governments analyze disease trends to predict outbreaks, enabling better resource allocation and policy-making.
+""")
 # Introduction to Time Series Data
 st.write("""
 ### Understanding Time Series Data
 Time series data consists of observations recorded sequentially over time. It is characterized by:
-- *Trend*: The long-term movement of the data.
-- *Seasonality*: Repeating patterns at fixed intervals.
-- *Cyclic Behavior*: Fluctuations that are not of fixed frequency.
-- *Irregular Components*: Random noise or anomalies.
+- **Trend**: The long-term movement of the data.
+- **Seasonality**: Repeating patterns at fixed intervals.
+- **Cyclic Behavior**: Fluctuations that are not of fixed frequency.
+- **Irregular Components**: Random noise or anomalies.
 
 A good time series dataset should:
-- Have a *datetime index* or a timestamp column.
-- Be *regularly spaced* (daily, monthly, yearly, etc.).
-- Contain *enough data points* to capture meaningful patterns.
-- Be checked for *missing values* and handled appropriately.
+- Have a **datetime index** or a timestamp column.
+- Be **regularly spaced** (daily, monthly, yearly, etc.).
+- Contain **enough data points** to capture meaningful patterns.
+- Be checked for **missing values** and handled appropriately.
 
 Common Applications:
-- *Stock Market Analysis*
-- *Weather Forecasting*
-- *Economic Trends & GDP Analysis*
-- *Sales Predictions*
+- **Stock Market Analysis**
+- **Weather Forecasting**
+- **Economic Trends & GDP Analysis**
+- **Sales Predictions**
 """)
-
 # Function to check if data is a time series
 def check_timeseries(df):
     if not isinstance(df.index, pd.DatetimeIndex):
